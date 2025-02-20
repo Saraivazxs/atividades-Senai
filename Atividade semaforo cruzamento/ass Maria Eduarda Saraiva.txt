@@ -1,0 +1,45 @@
+/* ass Maria Eduarda Saraiva 
+atividade: semáforo cruzamento
+20/02/25
+*/
+#define pinLedVermelhoA 13
+#define pinLedAmareloA 12
+#define pinLedVerdeA 11
+
+#define pinLedVermelhoB 7
+#define pinLedAmareloB 6
+#define pinLedVerdeB 5  
+
+#define tempoLigado5seg 5000
+#define tempoLigado3seg 3000
+#define tempoLigado2seg 2000
+
+void setup()
+{ 
+  pinMode(pinLedVerdeA, OUTPUT);
+  pinMode(pinLedAmareloA, OUTPUT);
+  pinMode(pinLedAmareloB, OUTPUT);
+  pinMode(pinLedVerdeB, OUTPUT);
+  pinMode(pinLedVermelhoA, OUTPUT);
+  pinMode (pinLedVermelhoB, OUTPUT);
+}
+
+void loop()  
+{
+  digitalWrite(pinLedVermelhoB,HIGH);
+  digitalWrite(pinLedVerdeA, HIGH);
+  delay(tempoLigado3seg);
+  digitalWrite(pinLedVerdeA, LOW);
+  digitalWrite(pinLedAmareloA, HIGH);
+  delay(tempoLigado2seg);
+  digitalWrite(pinLedAmareloA, LOW);
+  digitalWrite(pinLedVermelhoB, LOW);
+  digitalWrite(pinLedVermelhoA, HIGH);
+ digitalWrite(pinLedVerdeB, HIGH);
+ delay(tempoLigado3seg);
+ digitalWrite(pinLedVerdeB, LOW);
+  digitalWrite(pinLedAmareloB, HIGH);
+  delay(tempoLigado2seg);
+  digitalWrite(pinLedAmareloB, LOW);
+  digitalWrite(pinLedVermelhoA, LOW);
+}

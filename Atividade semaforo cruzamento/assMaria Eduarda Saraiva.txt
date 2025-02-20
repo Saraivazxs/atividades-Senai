@@ -1,0 +1,30 @@
+/* ass:Maria Eduarda Saraiva
+Projeto: Aula 28 - semaforo
+Dara 19/02/25
+*/
+#define pinLedVerde 11
+#define tempoLigado 3000
+#define pinLedAmarelo 12
+#define tempoLigado 2000
+#define pinLedVermelha 13 
+#define tempoLigado 5000
+ void setup()// Inicia o arduino
+ {
+   pinMode(pinLedVerde, OUTPUT);// Define saida 
+   pinMode(pinLedAmarelo, OUTPUT);// Define saida 
+   pinMode(pinLedVermelha, OUTPUT);// Define saida 
+ }
+ 
+  void loop()// faz os codigos seguirem um ciclo 
+  {
+    digitalWrite(11, HIGH);// Acende o led Verde
+    delay(3000); // Tempo do led acesso
+    digitalWrite(11, LOW);// Desliga o led
+    digitalWrite(12, HIGH);// Acende o led Amarelo
+    delay(2000);//Tempo do led acesso
+    digitalWrite(12, LOW);// Desliga o led
+    digitalWrite(13, HIGH);// Acende o led Vermelho
+    delay(5000);//Tempo do led acesso
+    digitalWrite(13, LOW);// Desliga o led
+  }
+ 
