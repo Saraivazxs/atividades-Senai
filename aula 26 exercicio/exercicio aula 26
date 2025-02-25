@@ -1,0 +1,97 @@
+/*
+Aluno:Maria Ed. Saraiva
+Ativide:Aula 26 - Exercicios
+Data 24/02/25
+*/
+
+int numeroA = 600;
+int resultado= 0;
+
+void setup()
+{  
+ 
+  
+  //atividade 1 começo
+  Serial.begin(9600); 
+  resultado = map(600,0, 1023, 0,100);
+  Serial.println(resultado);
+  resultado = constrain(numeroA,20, 80);
+  Serial.println(resultado);
+  //atividade 1 final
+  
+  
+  //Comeco da atividade 2
+  int valor =0;
+  Serial.println(valor);
+  valor++;
+  Serial.println(valor);
+  valor++;
+  Serial.println(valor);
+  valor++;
+  Serial.println(valor);             
+  valor++;
+  Serial.println(valor);
+  valor++;
+  Serial.println(valor);
+  valor++;
+  Serial.println(valor);             
+  valor++;
+  Serial.println(valor);
+  valor++;
+  Serial.println(valor);
+  valor++;
+  Serial.println(valor);
+  valor++;
+  Serial.println(valor);
+  valor++;
+  
+  
+  int valorB =10;
+  valorB --;
+  Serial.println(valorB);
+  valorB --;
+  Serial.println(valorB);
+  valorB --;
+  Serial.println(valorB);
+  valorB --;
+  Serial.println(valorB);
+  valorB --;
+  Serial.println(valorB);
+  valorB --;
+  Serial.println(valorB);
+  valorB --;
+  Serial.println(valorB);
+  valorB --;
+  Serial.println(valorB);
+  valorB --;
+  Serial.println(valorB);
+  valorB --;
+  Serial.println(valorB);
+  //final da atividade 2
+  
+  
+  
+  //Comeco da atividade 3
+  int valor1 = 30;
+  int valor2 = 20;
+ float resultadoReal = 0;
+   resultadoReal =((float)valor1 + (float)valor2) /2;
+   Serial.println(resultadoReal);
+  //final da atividade 3
+  
+  
+  
+  
+    
+  
+  
+  
+  
+}
+
+void loop()
+{
+ 
+  
+  
+}
