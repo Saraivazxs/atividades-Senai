@@ -1,0 +1,293 @@
+/* 
+aluno: Maria Eduarda Saraiva silva
+atividade: Exercicios 1 ao 8
+data 27/02/25
+*/
+
+
+////////////////////////////////////////////////////////////////
+
+começo da atividade 1
+ 
+#define pinLedVermelho 13
+
+void setup()
+{
+  
+Serial.begin(9600);
+pinMode(pinLedVermelho, OUTPUT);
+  
+int temperatura = 45;
+  if(temperatura > 30){   
+  }digitalWrite(pinLedVermelho, HIGH);
+}
+
+void loop()
+{
+
+  
+  
+  
+}
+
+fim as atividade 1 
+
+////////////////////////////////////////////////////////////////
+
+
+começo da atividade 2
+
+
+
+#define pinLedAzul 12
+void setup()
+{
+  Serial.begin(9600);
+  pinMode(pinLedAzul, OUTPUT);
+  
+  int bateria =15;
+  if(bateria < 20){
+  digitalWrite(pinLedAzul, HIGH);
+  }
+}
+void loop()
+{
+  
+}
+
+fim as atividade 2
+
+
+////////////////////////////////////////////////////////////////
+
+
+
+
+começo da atividade 3
+
+
+#define pinLedAmarelo 13
+float resultado =0;
+void setup()
+{
+  Serial.begin(9600);
+  
+  int numero = 5;
+  int resultado = 0;
+  
+  resultado = numero % 2;
+  pinMode(pinLedAmarelo, OUTPUT);
+  if (resultado==0){
+  digitalWrite(pinLedAmarelo, HIGH); 
+}
+
+}
+
+void loop()
+{
+  
+}
+
+  
+fim as atividade 3
+
+
+////////////////////////////////////////////////////////////////
+
+
+
+começo da atividade 4
+
+
+
+
+void setup()
+{
+ Serial.begin(9600);
+   int numero = -2;
+  if (numero < 0){
+    Serial.println("negativo");  
+  }else if (numero >0){
+    Serial.println("positivo");
+  }
+  
+}
+
+void loop()
+{
+ 
+}
+
+
+fim as atividade 4
+
+
+
+
+////////////////////////////////////////////////////////////////
+
+
+
+
+começo da atividade 5
+
+
+
+void setup()
+{
+ Serial.begin(9600);
+  
+  Serial.println("joao");
+  Serial.println("ajudante geral");
+  Serial.println("salario 800");
+  int salario = 800; 
+  float acrescimo = 1.1;
+  int resultado=0;
+  resultado = salario * acrescimo;
+  Serial.println("valor do salario do joao com acrescimo sera");
+  Serial.println(resultado);
+  
+
+  
+}
+
+void loop()
+{
+  
+}
+
+
+fim as atividade 5
+
+
+
+
+
+////////////////////////////////////////////////////////////////
+
+
+
+começo da atividade 6
+
+
+
+
+
+void setup()
+{
+ Serial.begin(9600);
+  int salario = 499;
+  float acrescimo = 1.3;
+  int resultado = 0;
+  if (salario >= 500){
+  Serial.println("nao recebera acrescimo");
+   Serial.println(resultado);
+  }
+  if (salario < 500){
+    resultado = salario * acrescimo ;
+  Serial.println("recebera acrescimo");  
+  Serial.println(resultado);
+  }
+}
+
+void loop()
+{
+}
+
+
+fim as atividade 6
+
+
+////////////////////////////////////////////////////////////////
+
+
+
+começo da atividade 7
+
+
+
+
+void setup()
+{
+  Serial.begin(9600);
+    int numeroA = 600;
+    int numeroB = 200;
+  
+  if ( numeroA > numeroB){
+    Serial.println("numero maior");
+    Serial.print(numeroA);
+  }else {  
+    Serial.println("numero maior");
+    Serial.println(numeroB);
+  }
+
+  
+
+  
+}
+  
+void loop()
+{
+ 
+}
+
+
+
+
+
+fim as atividade 7
+
+
+
+////////////////////////////////////////////////////////////////
+
+
+
+
+começo da atividade 8
+
+
+
+
+
+void setup()
+{
+   Serial.begin(9600);
+  int resultado = 0;
+  int nota1 = 9;
+  int nota2 = 7;
+  int nota3 = 5;
+  int nota4 = 10;
+     
+  resultado = (nota1 + nota2+ nota3 + nota4) /4;
+ 
+  if (resultado >= 7)
+  {
+  Serial.println("APROVADO");
+  }
+  else if (resultado >=5 && resultado <= 7){
+  }
+  else
+  {
+  Serial.println("REPROVADO");
+  }
+
+}
+
+void loop()
+{
+ 
+}
+
+
+
+fim as atividade 8
+
+
+
+////////////////////////////////////////////////////////////////
+
+
+
+
+

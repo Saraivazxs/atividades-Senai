@@ -1,0 +1,41 @@
+/* 
+Aluno: Maria E Saraiva
+data 7/03/25
+atividade: Aula 32 - logica sem delay
+*/
+
+
+#define pinLedAzul 13  
+
+unsigned long tempoInicial = 1000;
+bool  estadoLed =0;
+ 
+  
+void setup()
+{
+   
+    pinMode(pinLedAzul, OUTPUT); //define o led
+}
+
+void loop()
+{ 
+    unsigned long tempoAtual = millis ();
+  if (tempoAtual - tempoInicial>=1000)
+   {
+   if (estadoLed)
+   {
+    digitalWrite (pinLedAzul, LOW); // desliga led 
+    estadoLed=0;
+  }
+    else
+    {  
+      digitalWrite(pinLedAzul, HIGH); // liga o led
+      estadoLed=1;
+    }
+   
+    tempoInicial=tempoAtual;
+  }
+  
+              
+  
+}
