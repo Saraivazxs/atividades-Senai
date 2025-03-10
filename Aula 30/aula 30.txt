@@ -1,0 +1,67 @@
+*/ maria ed saraiva
+data 06/03/25
+aula - 30 
+/*
+
+
+#define pinLedCinza 13
+#define pinLedVermelho 12
+#define pinLedLaranja 11
+#define pinLedAmarelo 10
+#define pinLedVerde 9
+#define pinLedAzul 8
+void setup()
+{
+  Serial.begin(9600);
+  pinMode(pinLedCinza, OUTPUT);
+  pinMode(pinLedVermelho, OUTPUT);
+  pinMode(pinLedLaranja, OUTPUT);
+  pinMode(pinLedAmarelo, OUTPUT);
+  pinMode(pinLedVerde, OUTPUT);
+  pinMode(pinLedAzul, OUTPUT);
+  int escolha = 3;
+  
+  switch(escolha)
+  {    
+     case 0:
+    digitalWrite(pinLedCinza, HIGH);
+    Serial.println("pessimo");
+    break;
+    case 1:
+    digitalWrite(pinLedVermelho, HIGH);
+    Serial.println("ruim");
+    break;
+    case 2:
+    digitalWrite(pinLedLaranja, HIGH);
+    Serial.println("normal");
+    break;
+    case 3:
+    digitalWrite(pinLedAmarelo, HIGH);
+    Serial.println("boa");
+    break;
+    case 4:
+    digitalWrite(pinLedVerde, HIGH);
+    Serial.println("excelente");
+    break;
+    
+    
+    default:
+    digitalWrite(pinLedCinza, LOW);
+    digitalWrite(pinLedVermelho, LOW);
+    digitalWrite(pinLedLaranja, LOW);
+    digitalWrite(pinLedAmarelo, LOW);
+    digitalWrite(pinLedVerde, LOW);
+    digitalWrite(pinLedAzul, LOW);
+    digitalWrite(pinLedAzul, HIGH);
+    Serial.println("erro");
+    
+ 
+  }
+    
+}
+
+
+void loop()
+{
+  
+}
