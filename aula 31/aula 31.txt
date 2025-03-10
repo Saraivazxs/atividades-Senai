@@ -1,0 +1,12 @@
+signed long tempo;
+void setup()
+{
+  Serial.begin(9600);
+    
+}
+
+void loop()
+{
+ tempo = micros ();
+  Serial.println(tempo);
+}

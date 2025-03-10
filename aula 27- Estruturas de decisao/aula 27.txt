@@ -1,0 +1,43 @@
+/*
+aluno:Maria Eduarda Saraiva
+atividade = estruturas de decisao 
+data 25/02/25
+*/
+
+//Operadores de comparacao
+// = Atribuição, salvar valor na variavel
+// == verifica se dois valores são iguais
+// != verifica se dois valores são diferentes
+//< verifica se e meno
+//> verifica se e maior
+//<= verifica se e menor ou igual
+//>= verifica se e maior ou se e igual
+void setup()
+{
+  
+  Serial.begin(9600);
+  
+  int temperatura = 25;
+  
+  if (temperatura > 30){
+ Serial.println("partiu praia");
+   
+  }else if(temperatura <= 30 && temperatura > 24){
+   Serial.println(" ta dboa");
+   
+ }else if(temperatura <= 24 && temperatura > 18){
+   Serial.println("ta ok");
+ 
+ }else{
+  Serial.println("ta friozinho");
+   
+}
+  
+  
+}
+
+
+void loop()
+{
+ 
+}
