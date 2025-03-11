@@ -1,0 +1,28 @@
+/*
+aluno: Maria Ed Saraiva Silva
+Data 11/03/25
+Atividade: Tinkercad botao - 34
+*/
+
+#define pinBotao 10
+#define pinLed 2
+#define tempoLigado 500
+#define tempoDesligado 500
+void setup()
+{
+    pinMode(pinLed, OUTPUT);
+    pinMode(pinBotao, INPUT);
+}
+void loop()
+{
+   
+ bool estadoBotao = digitalRead(pinBotao);
+
+  if(estadoBotao)
+  {
+    digitalWrite(pinLed, HIGH);
+    delay(tempoLigado);
+    digitalWrite(pinLed, LOW);
+    delay(tempoDesligado);
+  }
+ 
