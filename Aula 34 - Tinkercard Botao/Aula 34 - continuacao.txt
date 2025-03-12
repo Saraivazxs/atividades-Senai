@@ -1,0 +1,28 @@
+/*
+aluno: Maria Ed Saraiva Silva
+Data 11/03/25
+Atividade: Tinkercad botao continuacao- 34
+*/
+
+#define pinBotao 10
+
+int estadoAnterior =0;
+int estadoBotao=0;
+unsigned long intervalo =0;
+void setup()
+{
+  Serial.begin(9600);
+   pinMode(pinBotao, INPUT);
+}
+
+void loop()
+{
+  int estadoAtual = digitalRead(pinBotao);
+  if (estadoAtual == 1 && estadoAnterior ==0) {
+    estadoBotao++;
+  Serial.print("clique ");
+  Serial.println(estadoBotao);
+  intervalo = millis();
+  }
+  estadoAnterior = estadoAtual;
+}
