@@ -1,0 +1,101 @@
+fiz ate o 6
+
+
+#include <Arduino.h>
+#include <Bounce2.h>
+#define pinBotao1 5
+#define pinBotao2 19
+#define pinBotao3 21
+
+//* INTANCIAS
+Bounce Botao1 = Bounce();
+Bounce Botao2 = Bounce();
+Bounce Botao3 = Bounce();
+
+int intensidadeLedA = 0;
+int intensidadeLedB = 0;
+int intensidadeLedC = 0;
+int intensidadeLedD = 0;
+
+void setup()
+{
+    Serial.begin(9600);
+    Botao1.attach(pinBotao1, INPUT_PULLUP);
+    Botao2.attach(pinBotao2, INPUT_PULLUP);
+    Botao3.attach(pinBotao3, INPUT_PULLUP);
+}
+
+void loop()
+{
+    Botao1.update();
+    Botao2.update();
+    Botao3.update();
+    static int contagem = 0;
+    static bool modoSelecao = 0;
+    if (Botao1.fell())
+    {
+        if (modoSelecao == 1) // se for 1
+        {
+            contagem++;
+            if (contagem == 4)
+            {
+                contagem = 0;
+            }
+            Serial.println(contagem);
+        }
+        else // caso contrario e 0
+        {
+            if (contagem == 0)
+            {
+                if (intensidadeLedA <= 90)
+                {
+                    intensidadeLedA += 10;
+                }
+            }
+            else if (contagem == 1)
+            {
+
+                if (intensidadeLedB <= 90)
+                {
+                    intensidadeLedB += 10;
+                }
+            }
+             else if (contagem == 2)
+            {
+
+                if (intensidadeLedC <= 90)
+                {
+                    intensidadeLedC += 10;
+                }
+            }
+             else if (contagem == 3)
+            {
+
+                if (intensidadeLedD <= 90)
+                {
+                    intensidadeLedD += 10;
+                }
+            }
+        }
+
+        if (Botao2.fell())
+        {
+
+            if (modoSelecao == 1)
+            {
+                contagem--;
+                if (contagem == -1)
+                {
+                    contagem = 3;
+                }
+                Serial.println(contagem);
+            }
+        }
+
+        if (Botao3.fell())
+        {
+            modoSelecao = !modoSelecao;
+            Serial.println(modoSelecao);
+        }
+    }
+  }
